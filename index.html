@@ -724,25 +724,17 @@
                 <figure class="entry-image">
                   <div class="video-thumbnail-wrapper" onclick="openVideoModal()"
                     style="cursor:pointer; position:relative; width:100%; height:100%;">
-                    <video id="portfolio-video-thumb" src="assets/video/movies-react-demo.mp4"
+                    <video id="portfolio-video-thumb" src="assets/videos/movies-react-demo.mp4"
                       class="img-fluid portfolio-video-thumb" muted preload="metadata"
                       style="width:100%; height:100%; object-fit:cover; display:block;"></video>
-                    <div class="video-play-btn"
-                      style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:5; pointer-events:none;">
-                      <div
-                        style="width:56px; height:56px; background:rgba(255,255,255,0.92); border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(0,0,0,0.35); transition:transform 0.2s;">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M8 5.14v14l11-7-11-7z" fill="#111" />
-                        </svg>
-                      </div>
-                    </div>
                   </div>
                   <div class="entry-overlay">
                     <div class="overlay-content">
                       <div class="entry-meta">React Development</div>
                       <h3 class="entry-title">Movies React Site</h3>
                       <div class="entry-links">
-                        <a href="#" onclick="openVideoModal(); return false;" title="Watch Demo">
+                        <a href="assets/videos/movies-react-demo.mp4" onclick="openVideoModal(); return false;"
+                          title="Watch Demo">
                           <i class="bi bi-play-circle"></i>
                         </a>
                       </div>
@@ -754,11 +746,11 @@
 
             <!-- Video Modal -->
             <div id="videoModal"
-              style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.88); align-items:center; justify-content:center;">
+              style=" position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.88); align-items:center; justify-content:center;">
               <div style="position:relative; max-width:90vw; max-height:90vh; width:960px;">
                 <button onclick="closeVideoModal()"
                   style="position:absolute; top:-40px; right:0; background:none; border:none; color:#fff; font-size:2rem; cursor:pointer; line-height:1;">&times;</button>
-                <video id="portfolio-video-modal" src="assets/video/movies-react-demo.mp4" controls autoplay
+                <video id="portfolio-video-modal" src="assets/videos/movies-react-demo.mp4" controls autoplay
                   style="width:100%; max-height:85vh; border-radius:8px; box-shadow:0 8px 40px rgba(0,0,0,0.6); display:block;"></video>
               </div>
             </div>

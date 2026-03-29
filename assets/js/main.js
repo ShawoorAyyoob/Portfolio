@@ -65,31 +65,7 @@
    */
   let scrollTop = document.querySelector('.scroll-top');
 
-function openVideoModal() {
-    var modal = document.getElementById('videoModal');
-    modal.classList.add('active');
-    var vid = document.getElementById('portfolio-video-modal');
-    vid.currentTime = 0;
-    vid.play();
-    document.body.style.overflow = 'hidden';
-  }
-  function closeVideoModal() {
-    var modal = document.getElementById('videoModal');
-    modal.classList.remove('active');
-    var vid = document.getElementById('portfolio-video-modal');
-    vid.pause();
-    document.body.style.overflow = '';
-  }
-  document.getElementById('videoModal').addEventListener('click', function(e) {
-    if (e.target === this) closeVideoModal();
-  });
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeVideoModal();
-  });
-  window.addEventListener('load', function() {
-    var thumb = document.getElementById('portfolio-video-thumb');
-    if (thumb) { thumb.currentTime = 0.1; }
-  });
+
 
   function toggleScrollTop() {
     if (scrollTop) {
@@ -267,3 +243,32 @@ function openVideoModal() {
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+function openVideoModal() {
+  var modal = document.getElementById('videoModal');
+  modal.classList.add('active');
+  var vid = document.getElementById('portfolio-video-modal');
+  vid.currentTime = 0;
+  vid.play();
+  document.body.style.overflow = 'hidden';
+}
+function closeVideoModal() {
+  var modal = document.getElementById('videoModal');
+  modal.classList.remove('active');
+  var vid = document.getElementById('portfolio-video-modal');
+  vid.pause();
+  document.body.style.overflow = '';
+}
+window.addEventListener('load', function() {
+  var modal = document.getElementById('videoModal');
+  if (modal) {
+    modal.addEventListener('click', function(e) {
+      if (e.target === this) closeVideoModal();
+    });
+  }
+  var thumb = document.getElementById('portfolio-video-thumb');
+  if (thumb) { thumb.currentTime = 0.1; }
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeVideoModal();
+});

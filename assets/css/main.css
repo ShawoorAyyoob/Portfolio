@@ -1928,11 +1928,11 @@ section,
 }
 
 .portfolio-video-entry .entry-image { position: relative; overflow: hidden; }
-  .portfolio-video-thumb { transition: transform 0.4s ease; }
-  .portfolio-video-entry:hover .portfolio-video-thumb { transform: scale(1.04); }
-  .video-thumbnail-wrapper:hover .video-play-btn > div { transform: scale(1.12); }
-  #videoModal { display: none; }
-  #videoModal.active { display: flex; }
+.portfolio-video-thumb { transition: transform 0.4s ease; }
+.portfolio-video-entry:hover .portfolio-video-thumb { transform: scale(1.04); }
+.video-thumbnail-wrapper:hover .video-play-btn > div { transform: scale(1.12); }
+#videoModal { display: none; }
+#videoModal.active { display: flex; }
 
 @media (max-width: 768px) {
   .portfolio .portfolio-entry .entry-image .entry-overlay {
