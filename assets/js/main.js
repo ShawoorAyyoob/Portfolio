@@ -65,6 +65,32 @@
    */
   let scrollTop = document.querySelector('.scroll-top');
 
+function openVideoModal() {
+    var modal = document.getElementById('videoModal');
+    modal.classList.add('active');
+    var vid = document.getElementById('portfolio-video-modal');
+    vid.currentTime = 0;
+    vid.play();
+    document.body.style.overflow = 'hidden';
+  }
+  function closeVideoModal() {
+    var modal = document.getElementById('videoModal');
+    modal.classList.remove('active');
+    var vid = document.getElementById('portfolio-video-modal');
+    vid.pause();
+    document.body.style.overflow = '';
+  }
+  document.getElementById('videoModal').addEventListener('click', function(e) {
+    if (e.target === this) closeVideoModal();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeVideoModal();
+  });
+  window.addEventListener('load', function() {
+    var thumb = document.getElementById('portfolio-video-thumb');
+    if (thumb) { thumb.currentTime = 0.1; }
+  });
+
   function toggleScrollTop() {
     if (scrollTop) {
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
